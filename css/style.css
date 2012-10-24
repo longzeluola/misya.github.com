@@ -1,0 +1,32 @@
+body {
+	font: normal 14px/2 "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	color: #e6e6e6;
+	text-align: center;
+	text-shadow: #222 1px 1px 1px;
+	background: #353737 url(../img/bg.png) repeat;
+}
+a {
+	color: #4cb376;
+}
+a:hover {
+	text-decoration: none;
+}
+img {
+	border: 0;
+}
+.wrapper {
+	width: 800px;
+	height: 480px;
+	margin: 20px auto;
+	padding: 50px 0;
+	background: url(../img/wrapper.png) no-repeat;
+}
+.hide {
+	display: none;
+}
+.social a {
+	width: 38px;
+	height: 38px;
+	margin: 5px 10px;
+	display: inline-block;
+}

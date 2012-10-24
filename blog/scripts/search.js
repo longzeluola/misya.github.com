@@ -29,11 +29,11 @@ google.setOnLoadCallback(function() {
 		var searchwords = $('input.gsc-input').val();
 		$('.page-title').text('搜索: '+searchwords)
 		$('.gsc-branding').css('display', 'none');
-		document.title = "搜索："+searchwords+" - may@Misya.Wiki";
+		document.title = "搜索："+searchwords+" - Misya";
 		location.hash = searchwords;
 		$("#toc_1").text("搜索："+searchwords);
 		$('a.gs-title').addClass('new').unwrap().wrap('<h3></h3>').each(function() {
-			var title=$(this).html().replace(/\- may@Misya.Wiki$/, "");
+			var title=$(this).html().replace(/\- Misya$/, "");
 			$(this).html(title);
 		});
 		$('b:contains("...")').contents().unwrap();

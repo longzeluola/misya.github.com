@@ -1,0 +1,11 @@
+
+.idea/
+*~
+~*
+*.diff
+*.patch
+*.bak
+.project
+.*proj
+.svn/
+*/.svn/

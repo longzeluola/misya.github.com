@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>技巧 - Misya</title>
+    <meta name="Keywords" content="may,misya,linux,vim,c/c++,python,algorithm" />
+    <meta name="Description" content="记录我的所学所得" />
+    <link href="images/favicon.ico" rel="SHORTCUT ICON" type="image/x-icon" />
+    <link rel="Stylesheet" type="text/css" href="styles/base.css" />
+    <link rel="Stylesheet" type="text/css" href="styles/misya.css" />
+    <script type="text/javascript">var root_path = '';</script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/misya.js"></script>
+</head>
+<body>
+<div id="header">
+     <div id="menu">
+         <div id="menu_center">
+             <ul>
+                 <li><a href="/"> Home</a></li>	
+                 <li><a href="diary/"> Diary</a></li>	
+                 <li><a href="todo/"> Todo</a></li>	
+                 <li><a href="http://about.me/misya"> About</a></li>	
+                 <li><div class="rss"><a href="https://github.com/misya/misya.github.com/commits/master.atom">RSS</a></div></li>
+                 <li><a href="http://t.qq.com/sevencolor" class="logo_a"> may(@askfuhu)</a></li>
+             </ul>
+         </div>
+         <div id="search">
+            <form method="get" action="search.html" id="search-input" >
+                <input type="text" name="q" value="" size="13" id="search-input-input"><input type="submit" id="search-submit" name="" value="OK">
+            </form>
+         </div>
+     </div>
+</div>
+<div id="container">
+    <div id="content">
+<h1 id="toc_1" class="justcenter">技巧</h1>
+<ol>
+<li>
+在当前插入模式下编辑/移动 (真得很有用)
+<pre>
+  &lt;C-U&gt; : 删除全部
+  &lt;C-W&gt; : 删除最后一个单词
+  &lt;HOME&gt;&lt;END&gt; : 移动到行首/行尾
+  &lt;C-LEFTARROW&gt;&lt;C-RIGHTARROW&gt; : 向前/后移动一个单词
+  &lt;C-X&gt;&lt;C-E&gt;,&lt;C-X&gt;&lt;C-Y&gt; : scroll while staying put in insert
+</pre>
+</li>
+<li>
+把最后一个命令贴到当前位置
+<pre>
+  i&lt;c-r&gt;:
+  " 把最后一个搜索指令贴到当前位置
+  i&lt;c-r&gt;/
+</pre>
+</li>
+<li>
+统计字数
+<pre>
+  visual模式下, 选中要查字数的片段后,按g + C-g
+</pre>
+</li>
+<li>
+居中光标所在行
+<pre>
+  zz / M : 将当前行置于屏幕中间
+  zt / H: 将当前行置于屏幕顶端
+  zb / L: 将当前行置于屏幕底端
+</pre>
+</li>
+<li>
+查看命令行历史记录
+<pre>
+q: 或 :_CTRL-F
+q? 或 ?_CTRL-F
+q/ 或 /_CTRL-F
+或通过
+set cedit=&lt;C-Y&gt;
+</pre>
+</li>
+<li>
+把对象送到命令行或者搜索行
+<pre>
+  &lt;C-R&gt;&lt;C-W&gt; : 执行当前光标下的单个单词
+  &lt;C-R&gt;&lt;C-A&gt; : 执行当前光标下尽可能多的单词
+  &lt;C-R&gt;- : 送至一个小型寄存器（同样使用于插入模式）
+  &lt;C-R&gt;[0-9a-z] : 送至一个命名寄存器 (括弧同上)
+  &lt;C-R&gt;% : 送至文件名(#也行) (同上)
+  &lt;C-R&gt;=somevar : 送至一个变量 (例如 :let sray="ray[0-9]") 
+</pre>
+</li>
+<li>
+块缩进
+<pre>
+  &gt;i{
+  &gt;a{
+  " also
+  &gt;% and &lt;%
+</pre>
+</li>
+<li>
+VISUAL 模式 (方便增加 HTML 标签)
+<pre>
+  vmap sb "zdi&lt;C-R&gt;z&lt;ESC&gt; : 在 VISUALLY模式下将选中的文本前后分别加上
+  vmap st "zdi&lt;?= &lt;C-R&gt;z ?&gt;&lt;ESC&gt; : 加上 &lt;?= ?&gt;
+</pre>
+</li>
+<li>
+快捷键
+<pre>
+  &lt;C-N&gt;&lt;C-P&gt; : 插入模式下自动完成填词
+  &lt;C-X&gt;&lt;C-L&gt; : 行自动完成（超级有用）
+  /&lt;C-R&gt;&lt;C-W&gt; : 把单个&lt;cword&gt;单词放入搜索或者命令行
+  /&lt;C-R&gt;&lt;C-A&gt; : 把字符串中有的单词&lt;CWORD&gt;放入搜索或者命令行
+</pre>
+</li>
+<li>
+重新选择上一次的选择区和相同的模式
+<pre>
+  gv  
+</pre>
+</li>
+</ol>
+    </div>
+</div>
+<div id="footer">
+    <div id="footer-3rd">
+        <div id="footer-text">
+            Copyright &copy;2012&nbsp;<a href="http://www.misya.me">Misya</a>&nbsp;&nbsp;|&nbsp;&nbsp;Powered By <a href="https://code.google.com/p/vimwiki">VimWiki</a>,&nbsp;&nbsp;<a href="https://github.com">GitHub</a><br>"Talk is cheap. Show me the code." Linus Torvalds
+        </div>
+    </div>
+</div>
+<div id="sidecatalog" style="position:absolute;display:none;">
+    <div class="sidebar" id="sidebar"></div>
+    <a class="gotop" href="#" id="gotop" title="返回顶部"></a>
+</div>
+<div id="side-catalog-content" style="position:absolute;display:none;"></div>
+</body>
+</html>
+<!-- Last modified:  2011-03-20 04:31:02 -->

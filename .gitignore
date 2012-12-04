@@ -1,6 +1,7 @@
 .idea/
 *~
 ~*
+*.bak
 *.diff
 *.patch
 .project
